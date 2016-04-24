@@ -1,6 +1,7 @@
 ﻿import express = require('express');
 import routes = require('./routes/index');
 import user = require('./routes/user');
+import api = require('./routes/api');
 import http = require('http');
 import path = require('path');
 
@@ -28,6 +29,8 @@ if ('development' == app.get('env')) {
 
 app.get('/', routes.index);
 app.get('/users', user.list);
+
+app.get('/api/hoge', api.hoge);
 
 http.createServer(app).listen(app.get('port'), function () {
     console.log('Express server listening on port ' + app.get('port'));
