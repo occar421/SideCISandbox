@@ -5,7 +5,7 @@ import api = require("./routes/api");
 import http = require("http");
 import path = require("path");
 
-var app: express.Express = express();
+let app = express();
 
 // all environments
 app.set("port", process.env.PORT || 3000);
