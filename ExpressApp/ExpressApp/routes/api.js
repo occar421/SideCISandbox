@@ -1,6 +1,6 @@
 "use strict";
 function hoge(req, res) {
-    res.send("Hoge hoge...");
+    res.send('Hoge hoge...');
 }
 exports.hoge = hoge;
 ;
